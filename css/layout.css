@@ -14,7 +14,7 @@ img,video{
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: 100%;
+  /* max-height: 100%; */
 }
 
 body{
@@ -27,7 +27,31 @@ body{
     grid-gap: 1em;
 }
 
+.crowd{
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: flex-end; */
+}
 .crowd__image{
-    /* max-height: 200px; */
-    /* overflow: hidden; */
+    /* this combined with flex-direction: column and ordering this to the last one means the image will be flush to the bottom */
+    order: 1;
+    margin-top: auto;
+
+    /* this combined with column direction and justify-content: flex-end; keeps image at top and rest pushed to bottom */
+    /* order: -1;
+    margin-bottom: auto; */
+}
+.crowd__image img{
+    vertical-align: middle; /*removes the 3px gap below the image */
+}
+
+
+.crowd__text{
+    /* margin-top: auto; */
+}
+.outside-link{
+    /* display: block; */
+    /* text-align: right; */
+    /* margin-top: .5rem; */
 }
